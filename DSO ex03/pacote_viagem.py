@@ -1,7 +1,8 @@
 
+
 class PacoteViagem:
 
-    def __init__(self, origem, destino, duracao, custo_unitario):
+    def __init__(self, origem, destino, duracao, custo_unitario: int):
         self.__origem = origem
         self.__destino = destino
         self.__duracao = duracao

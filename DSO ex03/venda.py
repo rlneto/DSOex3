@@ -1,9 +1,11 @@
 from pacote_viagem import PacoteViagem
 from cliente import Cliente
 
+
 class Venda:
 
-    def __init__(self, codigo: int, cliente: Cliente, descricao: str, pacote: PacoteViagem, quantidade: int):
+    def __init__(self, codigo: int, cliente: Cliente, descricao: str,
+                 pacote: PacoteViagem, quantidade: int):
         self.__codigo = codigo
         self.__cliente = cliente
         self.__descricao = descricao
@@ -50,7 +52,6 @@ class Venda:
     def quantidade(self, quantidade: int):
         self.__quantidade = quantidade
 
-    @property
     def preco_total(self):
-        calc = self.pacote.custo_unitario * self.quantidade
+        calc = self.__pacote.custo_unitario * self.__quantidade
         return calc
