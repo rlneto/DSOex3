@@ -50,6 +50,7 @@ class Venda:
     def quantidade(self, quantidade: int):
         self.__quantidade = quantidade
 
-    #@property
-    #def preco_total(self):
-    #    self.preco_total = preco_total
+    @property
+    def preco_total(self):
+        calc = self.pacote.custo_unitario * self.quantidade
+        return calc
